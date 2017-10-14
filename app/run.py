@@ -13,8 +13,8 @@ webpack = Webpack()
 
 
 app = Flask(__name__)
-app.config.from_object(DevelopmentConfig)
 webpack.init_app(app)
+app.config.from_object(DevelopmentConfig)
 # assets = Environment(app)
 
 # bundles = {

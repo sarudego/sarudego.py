@@ -1,11 +1,23 @@
 appdirs==1.4.3
 awesome-slugify==1.6.5
 Flask==1.0.0
-gunicorn==19.7.0
 less==3.0.0
-Flask-webpack=0.1.0
 markdown2==2.3.3
 Pillow==4.0.0
 PyGithub==1.32
 pyparsing==2.2.0
 Unicode==0.4.20
+
+
+# Asset management
+Flask-Webpack==0.1.0
+
+# Forms
+Flask-WTF==0.11
+WTForms-Components==0.9.7
+
+# Deployment
+gunicorn==19.7.0
+
+
+
