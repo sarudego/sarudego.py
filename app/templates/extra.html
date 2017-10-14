@@ -1,0 +1,17 @@
+{% extends "base/base.html" %}
+{% from "_macros.html" import render_extra  %}
+
+{% block header %}
+{% include "header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="extra">
+  {{ render_extra("nasa", "nasa.jpg", "qweqwe") }}
+  {{ render_extra("uCode", "ucode.jpg", "qweqwe") }}
+  {{ render_extra("hashCode", "hashCode.jpg", "qweqwe") }}
+</div>
+
+
+{% endblock %}
+

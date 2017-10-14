@@ -1,0 +1,17 @@
+{% extends "base/base.html" %}
+
+{% from "_macros.html" import render_skill %}
+
+{% block header %}
+{% include "header.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div>
+  {{ render_skill('Programming',['Python, JS, Angular, NodeJS, LaTeX']) }}
+  {{ render_skill('Technologies',['Python, JS, Angular, NodeJS, LaTeX']) }}
+  {{ render_skill('Languages',['Python, JS, Angular, NodeJS, LaTeX']) }}
+</div>
+
+{% endblock %}

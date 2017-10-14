@@ -1,0 +1,27 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+<ul class="test">
+  <li class="fa-home"></li>
+  <li class="fa-suitcase"></li>
+  <li class="fa-flask"></li>
+  <li class="fa-user"></li>
+</ul>
+
+<div class="col-sm-9 presentation">
+  <p>SysAdmin - Computer Enginner</p>
+  {%- if msg -%}<p>{{msg}}</p> {% endif %}
+</div>
+
+<!--<div class="container-fluid fill light-white-font">-->
+  <!--<div id="home" class="container-fluid fill dark-gray-background">-->
+    <!--<h1 class="center text-center">-->
+      <!--<p>Hi, my name is <strong class="middle-blue-font">Samuel Ruiz de Gopegui-->
+      <!--Mu&ntilde;oz</strong></p>-->
+      <!--<p>and I'm <span class="element"></span></p>-->
+      <!--<p>living in <strong class="middle-blue-font">Spain</strong>.</p>-->
+    <!--</h1>-->
+  <!--</div>-->
+<!--</div>-->
+{% endblock %}
+
