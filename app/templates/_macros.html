@@ -1,17 +1,10 @@
 {% macro nav_link(endpoint, text) %}
-  {% if request.endpoint.endswith(endpoint) %}
-    <li class="active"><a href="{{ url_for(endpoint) }}">{{text}}</a></li>
-  {% else %}
-    <li><a href="{{ url_for(endpoint) }}">{{text}}</a></li>
-  {% endif %}
+    <a href="{{ url_for(endpoint) }}">{{text}}</a>
 {% endmacro %}
-
-
 
 {%  macro render_field(field) %}
   <td> {{ field.label }} </td>
   <dd> {{ field(**kwargs) | safe }} </dd>
-
   {% if field.errors %}
     </ul>
       {% for error in field.errors %}
@@ -22,19 +15,32 @@
 {% endmacro %}
 
 {% macro render_skill(name, myList)  %}
-  <strong> {{ name }} </strong>
-  <p> 
-  {% for skill in myList %}
-    {{skill}}
-  {% endfor %}
-  </p>
+  <div class="subskill">
+    <strong> {{ name }} </strong>
+    <p> 
+      {% for skill in myList %}
+        {{skill}}
+      {% endfor %}
+    </p>
+  </div>
 {% endmacro %}
 
-
-{% macro render_extra(name, image, info)  %}
-  <img src="static/images/{{ image }}" alt="name" class="image-extra">
-  <strong> {{ name }} </strong>
-  <p> {{ info }} </p>
+{% macro render_extra(altName, name, image, info, alto, ancho, url, nameUrl)  %}
+  <div class="filtr-item portfolio-t">
+    <figure>
+      <img src={{image}} width={{ancho}} height={{alto}} class="img-responsive"
+                                                         alt={{altName}}>
+        <figcaption>
+          <h3> {{name}}</h3>
+          <h5>
+            <p> {{info}} </p>
+            <a href={{url}} target="_blank">
+              {{nameUrl}}
+            </a>
+          </h5>
+        </figcaption>
+    </figure>
+  </div>  
 {% endmacro %}
 
 

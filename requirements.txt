@@ -1,7 +1,9 @@
 appdirs==1.4.3
 awesome-slugify==1.6.5
 Flask==1.0.0
+flask-stylus2css==0.1.2
 less==3.0.0
+live-stylus==0.2.7
 markdown2==2.3.3
 Pillow==4.0.0
 PyGithub==1.32

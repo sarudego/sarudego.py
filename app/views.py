@@ -4,10 +4,9 @@ from flask import request, redirect, render_template, url_for
 # from app import app
 
 from config import DevelopmentConfig
-# from flaskext.stylus2css import stylus2css stylus2css(app, css_folder=’css’, stylus_folder=’src/stylus’)
-# from live_stylus import ConvStylus
 
 import forms
+
 
 webpack = Webpack()
 
@@ -15,9 +14,6 @@ webpack = Webpack()
 app = Flask(__name__)
 # webpack.init_app(app)
 app.config.from_object(DevelopmentConfig)
-# if app.debug:
-    # from flaskext.stylus2css import stylus2css 
-    # stylus2css(app)
 
 
 @app.route('/')
@@ -37,7 +33,11 @@ def home():
 @app.route('/skills')
 def skills():
     return render_template(
-            'skills.html'
+            'skills.html',
+            skill=[
+                {"programming": "Python, AngularJS"},
+                {"languages": "spanish, english"}
+                ]
             )
 
 
@@ -78,6 +78,5 @@ def contact():
 
 
 if __name__ == '__main__':
-    # ConvStylus() # ('path')
     app.run(port=8000)
 

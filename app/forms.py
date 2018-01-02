@@ -6,14 +6,14 @@ from wtforms import validators
 
 
 class CommentForm(Form):
-    username = StringField('Username', 
+    username = StringField('Username',
             [
-                validators.DataRequired(message='El username es requerido.'), 
-                validators.length(min=4, max=25, message="Ingrese un username válido, 4 carácteres mínimo.") 
+                validators.DataRequired(message='El username es requerido.'),
+                validators.length(min=4, max=25, message="Ingrese un username válido, 4 carácteres mínimo.")
             ])
-    email = EmailField('Email', 
+    email = EmailField('Email',
             [
-                validators.Required(message='El email es requerido.'), 
-                validators.Email(message="Ingrese un email válido.") 
+                validators.Required(message='El email es requerido.'),
+                validators.Email(message="Ingrese un email válido.")
             ])
     comment = TextField('Comentario')

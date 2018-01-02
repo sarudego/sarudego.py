@@ -1,4 +1,5 @@
 {% extends "base/base.html" %}
+{% from "_macros.html" import render_skill %}
 {% from "_macros.html" import render_extra  %}
 
 {% block header %}
@@ -6,12 +7,66 @@
 {% endblock %}
 
 {% block content %}
-<div class="extra">
-  {{ render_extra("nasa", "nasa.jpg", "qweqwe") }}
-  {{ render_extra("uCode", "ucode.jpg", "qweqwe") }}
-  {{ render_extra("hashCode", "hashCode.jpg", "qweqwe") }}
+
+<div id="writeSkills" class="container-fluid fill dark-gray-background">
+        <h1 class="center text-center">
+          <p><span class="element"></span></p>
+        </h1>
+ </div>
+
+
+
+<div class="wrapperSkills">
+  <div class="main skills">
+    {{ render_skill('Programming',['Python, JS, Angular, NodeJS, LaTeX']) }}
+    {{ render_skill('Technologies',['Linux, Git, HTML5, CSS3,']) }}
+    {{ render_skill('Languages',['English professional competency, Spanish
+    native, Nowergian basic']) }}
+  </div>
 </div>
 
 
+
+<div class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="filtr-container agileits">
+      {{ render_extra("Nasa_Hackathon","Nasa Hackathon",
+      "https://s3-eu-west-1.amazonaws.com/sarudego-bucket/nasa2.jpg", "Global
+      Nominee and won the regional award for the best mobile app in 2017.",
+      "300", "550", "https://github.com/TheGreatGatsvim/NASA-April-2017",
+      "Recycleme") }}
+
+      {{ render_extra("uCode_Hackathon","uCode Hackathon",
+      "https://s3-eu-west-1.amazonaws.com/sarudego-bucket/uCode.jpg", "Machine
+      Learning challenge proposed by Adidas to identify a sneaker in a team
+      competition.","300", "550",
+      "https://github.com/TheGreatGatsvim/uCode-March-2017","uCode") }}
+      
+      {{ render_extra("HashCode_Competition","HashCode competition",
+      "https://s3-eu-west-1.amazonaws.com/sarudego-bucket/hashCode2.png",
+      "Competition proposed by google where they give you a real problem to
+      solve.", "300", "550","https://github.com/TheGreatGatsvim/Google-Feb-2017", "hashCode") }}
+      
+      {{ render_extra("Autonomous_Mobile_Robots","Autonomous Mobile Robots",
+      "https://s3-eu-west-1.amazonaws.com/sarudego-bucket/amr-mooc.jpg",
+      "Programming applications for a mobile robot to perform tasks in a complex
+      environment.", "300", "400",
+      "https://github.com/sarudego/Autonomous-Mobile-Robots.", "Autonomous Mobile Robots") }}
+
+    </div>
+  </div>
+</div>
+
+
+
 {% endblock %}
+
+
+
+{% block addJs %}
+  <script type=text/javascript src="{{ url_for('static', filename='js/textExtra.js') }}"></script>
+{% endblock %}
+
+
+
 

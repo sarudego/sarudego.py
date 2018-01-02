@@ -3,12 +3,13 @@ from flask import request, redirect, render_template, url_for
 # from app import app
 from flask_assets import Environment, Bundle
 
-from config import DevelopmentConfig
+# from config import DevelopmentConfig
 
-import forms
+import app/forms
+# from app import forms
 
 app = Flask(__name__)
-app.config.from_object(DevelopmentConfig)
+# app.config.from_object(DevelopmentConfig)
 assets = Environment(app)
 assets.config['less_bin'] = '/usr/lib/node_modules/less/bin/lessc'
 
