@@ -1,5 +1,6 @@
 body{
-  background: #232333;
+  background: rgb(22, 22, 22);
+	/*background: #232333;*/
   color: white;
 }
 
@@ -102,12 +103,23 @@ nav a:hover{
 
 
 /* --- skills & extra--- */
+.skills{
+  margin-top: 150px;
+  margin-bottom: 120px; 
+}
+
+
 .wrapperSkills{
   display: flex;
   justify-content: center;
+  /*flex-flow: column;*/
+  /*width: 50%;*/
   /*align-items: center;*/
 }
 
+ul{
+  list-style-type: none;
+}
 
 .subskill{
   /*background: black;*/
@@ -117,6 +129,18 @@ nav a:hover{
   /*justify-content: center;*/
   align-items: center;
 }
+
+.bar-container {
+  background: #555;
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin-top: 5px;
+  display: block;
+  border-radius: 5px;
+}
+
+
 
 .portfolio {
   padding: 100px 0;
@@ -310,6 +334,8 @@ footer{
     font-size: 23px;
   }
 }
+
+
 
 
 
