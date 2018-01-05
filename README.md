@@ -1,6 +1,6 @@
 # sarudego.py
 
-My personal web in Python Flask.
+My personal web in Python.
 
 Just Flask, HTML5, CSS3, and Javascript.
 
