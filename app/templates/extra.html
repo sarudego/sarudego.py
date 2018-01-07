@@ -29,21 +29,9 @@
 </div>
 
 
-
-<!--<div class="wrapperSkills">-->
-<!--<div class="main skills">-->
-<!--{{ render_skill('Programming',['Python, JS, Angular, NodeJS, LaTeX']) }}-->
-<!--{{ render_skill('Technologies',['Linux, Git, HTML5, CSS3,']) }}-->
-<!--{{ render_skill('Languages',['English professional competency, Spanish-->
-<!--native, Nowergian basic']) }}-->
-<!--</div>-->
-<!--</div>-->
-
-
-
 <div class="portfolio" id="portfolio">
   <div class="container">
-    <div class="filtr-container agileits">
+    <div class="filtr-container">
       {{ render_extra("Nasa_Hackathon","Nasa Hackathon",
       "https://s3-eu-west-1.amazonaws.com/sarudego/nasa2.jpg", "Global
       Nominee and won the regional award for the best mobile app in 2017.",
@@ -66,7 +54,6 @@
       "Programming applications for a mobile robot to perform tasks in a complex
       environment.", "300", "400",
       "https://github.com/sarudego/Autonomous-Mobile-Robots.", "Autonomous Mobile Robots") }}
-
     </div>
   </div>
 </div>
@@ -78,7 +65,6 @@
 
 
 {% block addJs %}
-<script type=text/javascript src="{{ url_for('static', filename='js/textExtra.js') }}"></script>
 {% endblock %}
 
 
