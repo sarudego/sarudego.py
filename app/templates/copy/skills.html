@@ -1,0 +1,44 @@
+{% extends "base/base.html" %}
+
+{% from "_macros.html" import render_skill %}
+
+{% block addCss %}
+
+{% endblock %}
+
+
+{% block header %}
+{% include "header.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="wrap">
+  <div class="skillsTyping">
+    <pre><div class="highLight"><div data-line="1"><span class="keyword">function</span> setError(<span class="variable">$errorcode</span>) {</div></div>
+<div class="highLight"><div data-line="2">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="variable">$this</span><span class="operator">-></span><span class="variable2">error</span> = <span class="variable">$this</span><span class="operator">-></span><span class="variable2">errors[<span class="string">$errorcode</span>];</span></div></div>
+<div class="highLight"><div data-line="2">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;}</div></div>
+<div class="highLight"><div data-line="1">}</div></div>
+<div class="highLight"><div data-line="1"><span class="keyword">function</span> getError(<span class="variable">$errormessage</span> = <span class="string">''</span>) {</div></div>
+<div class="highLight"><div data-line="2">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="variable">$error</span> = <span class="variable">$this</span><span class="operator">-></span><span class="variable2">errorcode</span>.<span class="variable">$this</span><span class="operator">-></span><span class="variable2">errormessage;</span></div></div>
+<div class="highLight"><div data-line="2">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="keyword">return</span> <span class="variable">$error;</span></div></div>
+<div class="highLight"><div data-line="2">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span class="keyword">exit;</span></div></div>
+<div class="highLight"><div data-line="1">}</div></div><br />
+<div class="highLight"><div data-line="1"><span class="comment">/**</span></div></div>
+<div class="highLight"><div data-line="1"><span class="comment">&nbsp;* <span class="docComment">@link</span> <a href="http://softables.tk/" target="_blank">Home</a></span></div></div>
+<div class="highLight"><div data-line="1"><span class="comment">&nbsp;* <span class="docComment">@todo</span> ..write a 404 page that actually makes sense.</span></div></div>
+<div class="highLight"><div data-line="1"><span class="comment">&nbsp;*/</span></div></div>
+<div class="highLight"><div data-line="2"><span class="variable">$err</span><span class="operator">-></span><span class="variable2">setError</span>(<span class="constant">404</span>);</div></div>
+<div class="highLight"><div data-line="2"><span class="variable">$err</span><span class="operator">-></span><span class="variable2">getError</span>(<span class="string">"Page Not Found"</span>);</div></div>
+    </pre>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+{% block addJs %}
+<script type=text/javascript src="{{ url_for('static', filename='js/textExtra.js') }}"></script>
+{% endblock %}
+

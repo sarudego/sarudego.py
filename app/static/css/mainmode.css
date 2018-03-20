@@ -1,5 +1,6 @@
 html, body {
   min-height: 100%;
+	
 }
 .dummy {
   position: absolute;
@@ -9,5 +10,5 @@ html, body {
   height: 122px;
   margin: -61px 0 0 -100px;
   text-align: center;
-  font: italic 22px/1.5 Georgia, serif; 
-}
+  font: italic 16px/1.5 Georgia, serif; 
+} 

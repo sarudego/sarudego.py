@@ -1,14 +1,8 @@
-from flask import Flask
 from flask import render_template
-from flaskext.lesscss import lesscss
-#from app import app
-
-from config import DevelopmentConfig
-
+from app import app
 
 app = Flask(__name__)
 app.config.from_object(DevelopmentConfig)
-# lesscss(app)
 
 
 @app.route('/')
@@ -46,9 +40,5 @@ def page_not_found(e):
 
 if __name__ == '__main__':
     # ConvStylus() # ('path')
-    print(app.root_path)
-    print(app.secret_key)
-    print(app.static_url_path)
-    print(app.static_folder)
     app.run(port=8000)
 
