@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import render_template
-# from flaskext.lesscss import lesscss
+from flaskext.lesscss import lesscss
 #from app import app
 
 from config import DevelopmentConfig
@@ -14,19 +14,28 @@ app.config.from_object(DevelopmentConfig)
 @app.route('/')
 def index():
     return render_template(
-            'index.html'
+            'skeleton/index.html'
             )
 
-@app.route('/about')
-def about():
+
+@app.route('/home')
+def home():
     return render_template(
-            'about.html'
+            'skeleton/home.html'
             )
 
-@app.route('/projects')
-def projects():
+
+@app.route('/skills')
+def skills():
     return render_template(
-            'projects.html'
+            'skeleton/skills.html'
+            )
+
+
+@app.route('/extra')
+def extra():
+    return render_template(
+            'skeleton/extra.html'
             )
 
 
@@ -37,9 +46,9 @@ def page_not_found(e):
 
 if __name__ == '__main__':
     # ConvStylus() # ('path')
-    # print(app.root_path)
-    # print(app.secret_key)
-    # print(app.static_url_path)
-    # print(app.static_folder)
+    print(app.root_path)
+    print(app.secret_key)
+    print(app.static_url_path)
+    print(app.static_folder)
     app.run(port=8000)
 

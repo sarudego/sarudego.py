@@ -1,9 +1,9 @@
-{% extends "base/base.html" %}
-{% from "_macros.html" import render_skill %}
-{% from "_macros.html" import render_extra  %}
+{% extends "skeleton/base/base.html" %}
+{% from "skeleton/_macros.html" import render_skill %}
+{% from "skeleton/_macros.html" import render_extra  %}
 
 {% block header %}
-{% include "header.html" %}
+{% include "skeleton/header.html" %}
 {% endblock %}
 
 {% block content %}
@@ -50,7 +50,7 @@
       solve.", "300", "550","https://github.com/TheGreatGatsvim/Google-Feb-2017", "hashCode") }}
 
       {{ render_extra("Autonomous_Mobile_Robots","Autonomous Mobile Robots",
-      "https://s3-eu-west-1.amazonaws.com/sarudego/amr-mooc.jpg",
+      " ",
       "Programming applications for a mobile robot to perform tasks in a complex
       environment.", "300", "400",
       "https://github.com/sarudego/Autonomous-Mobile-Robots.", "Autonomous Mobile Robots") }}
