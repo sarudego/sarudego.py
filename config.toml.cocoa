@@ -1,0 +1,34 @@
+baseurl = "https://sarudego.es/"
+theme = "cocoa-eh"
+#builddrafts = true
+canonifyurls = true
+contentdir = "content"
+languageCode = "en-US"
+layoutdir = "layouts"
+publishdir = "public"
+author = "Sarudego"
+title = "Sarudego's Web"
+# disqusshortname = ""
+pluralizelisttitles = false
+
+[permalinks]
+blog = "blog/:slug/"
+
+[params]
+dateform = "May 10, 2019"
+dateformfull = "Mon Jan 2 2006 15:04:05 MST"
+description = "Sarudego web"
+# copyright = "Copyright © 2015 Nishanth Shanmugham"
+logofile = "img/logo.png"
+faviconfile = "img/logo.png"
+highlightjs = true
+progressively = true
+align_left = false
+lang = "en"
+github = "sarudego"
+email = "sruizdegopegui@gmail.com"
+linkedin = "john-example-aa80ue8è"
+# twitter = "example"
+social_banner = "img/banner.png"
+posts_navigation = true
+small_banner_logo = false

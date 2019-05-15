@@ -1,0 +1,32 @@
+baseURL = "https://sarudego.es"
+languageCode = "en_US"
+defaultContentLanguage = "en"
+title = "sarudego"
+theme = "dream"
+
+copyright = ''
+
+# googleAnalytics = "UA-98295641-1"
+# disqusShortname = "sarudego"
+# enableRobotsTXT = true
+# hasCJKLanguage = true
+
+[params]
+  author = "sarudego"
+  description = "Sarudego's web"
+  # avatar = "tn.png"
+  motto = "In My Head."
+
+  email = "sruizdegopegui@gmail.com"
+  github = "sarudego"
+  # linkedin = ""
+  # codepen = ""
+  # stackoverflow = ""
+
+  aboutHeader = "About me"
+
+  paginate = 4
+  siteStartYear = 2016
+
+  favicon = "/favicon.ico"
+
