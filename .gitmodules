@@ -1,0 +1,3 @@
+[submodule "themes/voce"]
+	path = themes/voce
+	url = https://github.com/limbenjamin/voce
