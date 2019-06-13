@@ -93,6 +93,11 @@ img {
   height: auto; /* Make sure images are scaled correctly. */
   max-width: 100%; /* Adhere to container width. */
 }
+img.align-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 button,
 input,
 select,

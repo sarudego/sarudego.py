@@ -5,9 +5,11 @@ from __future__ import unicode_literals
 THEME = 'themes/voce'
 
 AUTHOR = 'Sarudego'
-SITENAME = 'Sarudego\'s Web'
+SITENAME = 'Sarudego'
 SITESUBTITLE = 'A personal blog.'
 SITEURL = ''
+# SITEURL = 'www.sarudego.es'
+# ABSOLUTE_URL = SITEURL
 
 DEFAULT_METADATA = {}
 KEYWORDS = ''
@@ -16,8 +18,18 @@ PATH = 'content'
 TIMEZONE = 'Europe/Madrid'
 DEFAULT_LANG = 'en'
 
+# USER_LOGO_URL = 'sazut.jpg'
+USER_LOGO_URL = '/pictures/sazut.jpg'
 # FAVICON = 'images/favicon.ico'
-STATIC_PATHS = ['images']
+STATIC_PATHS = ['pictures', 'extra/favicon-16x16.png', 'extra/sazut.jpg']
+EXTRA_PATH_METADATA = {
+    'extra/favicon-16x16.png': {
+        'path': 'favicon-16x16.png'
+    },
+    'extra/sazut.jpg': {
+        'path': 'sazut.jpg'
+    }
+}
 # PAGE_PATHS = ['pages']
 
 # Feed generation is usually not desired when developing
@@ -26,6 +38,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+LOAD_CONTENT_CACHE = False
+DELETE_OUTPUT_DIRECTORY = True
 
 # Voce theme config
 GLOBAL_KEYWORDS = ''
@@ -39,16 +53,13 @@ ARCHIVES_URL = 'archives.html'
 
 # Blogroll
 LINKS = (
-    ('INDEX', 'https://sarudego.es'),
-    ('ABOUT ME', 'pages/about'),
-    ('PROJECTS', '/projects'),
-    # ('Jinja2', 'http://jinja.pocoo.org/'),
-    # ('You can modify those links in your config file', '#'),
+    ('INDEX', 'localhost:8000'),
+    # ('ABOUT ME', 'pages/about'),
+    ('PROJECTS', SITEURL + '/pages/projects'),
 )
 
 # Social widget
 SOCIAL = (
-    ('You can add links in your config file', '#'),
     ('Email', 'mailto:sruizdegopegui[at]gmail[dot]com'),
     ('GitHub', 'https://github.com/sarudego'),
 )
@@ -59,4 +70,4 @@ PLUGINS = ['themes.voce.plugins.assets']
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+RELATIVE_URLS = ''
