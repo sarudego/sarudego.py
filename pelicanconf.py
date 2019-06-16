@@ -7,7 +7,7 @@ THEME = 'themes/voce'
 AUTHOR = 'Sarudego'
 SITENAME = 'Sarudego'
 SITESUBTITLE = 'A personal blog.'
-SITEURL = ''
+SITEURL = 'http://localhost:8000'
 # SITEURL = 'www.sarudego.es'
 # ABSOLUTE_URL = SITEURL
 
@@ -19,14 +19,14 @@ TIMEZONE = 'Europe/Madrid'
 DEFAULT_LANG = 'en'
 
 # USER_LOGO_URL = 'sazut.jpg'
-USER_LOGO_URL = '/pictures/sazut.jpg'
+USER_LOGO_URL = 'https://sarudego.s3-eu-west-1.amazonaws.com/logo1.png'
 # FAVICON = 'images/favicon.ico'
-STATIC_PATHS = ['pictures', 'extra/favicon-16x16.png', 'extra/sazut.jpg']
+STATIC_PATHS = ['pictures', 'extra/favicon-16x161.png', 'images/sazut.jpg']
 EXTRA_PATH_METADATA = {
     'extra/favicon-16x16.png': {
         'path': 'favicon-16x16.png'
     },
-    'extra/sazut.jpg': {
+    'images/sazut.jpg': {
         'path': 'sazut.jpg'
     }
 }
@@ -69,5 +69,6 @@ PLUGINS = ['themes.voce.plugins.assets']
 
 DEFAULT_PAGINATION = 10
 
+DELETE_OUTPUT_DIRECTORY = True
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = ''
